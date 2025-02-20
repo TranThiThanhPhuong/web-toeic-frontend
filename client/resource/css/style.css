@@ -6,20 +6,34 @@ body {
 	color:#666;
 	font-size:16px;
 	font-weight: 400;
-	  -webkit-font-smoothing: antialiased;
+	-webkit-font-smoothing: antialiased;
     font-smoothing: antialiased;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    border: none;
 }
 
 * {
      text-shadow: 0 1px 1px rgba(255,255,255,.3);
 }
 
+li, ul, a {
+    text-decoration: none;
+    list-style: none;
+}
+
 p {
     line-height: 24px
 }
+
 a {
     color:#0088cc;
 }
+
 a:hover {
     text-decoration: none;
 }
@@ -50,35 +64,121 @@ h3 {
 
 h4 {
     font-size:18px; 
-    font-weight: 400}
+    font-weight: 400
+}
 
 /* 
 HEADER ROW STYLE
 ===========================*/
-#header-row{
+#header-row {
 	background: #f5f5f5;
 	border-bottom:1px solid #eee;
 	padding: 15px 0;
 }
 
-#header-row .navbar{margin:10px 0 0 0;}
+#header-row .navbar { 
+    margin:10px 0 0 0; 
+}
 
-#header-row .navbar .navbar-inner{
+#header-row .navbar .navbar-inner {
 	border:none;
 	box-shadow: none;
 	margin: 0;
 	background: transparent;
 }
 
-#header-row .navbar .navbar-inner ul.nav > li > a{
+#header-row .navbar .navbar-inner ul.nav > li > a {
 	box-shadow: none;
 	background: transparent;
 	color: #0088cc;
 }
-#header-row .navbar .navbar-inner ul.nav li.active a{
+#header-row .navbar .navbar-inner ul.nav li.active a {
 	color: #333;
 }
 
+#header-row .navbar .nav ul li {
+    display: inline-block;
+    position: relative;
+} 
+
+#header-row .navbar .nav ul li a {
+    display: block; 
+    padding: 10px 20px; 
+    color: #0088cc; 
+    text-decoration: none;
+    text-align: center;
+    font-size: 18px;
+}
+
+#header-row .navbar .nav ul.dropdown {
+    width: 100%;
+    display: none;
+    position: absolute;
+    background: #333;
+    z-index: 999;
+}
+
+#header-row .navbar .nav ul li a:hover {
+    background: #333;
+}
+
+#header-row .navbar .nav ul li:hover ul.dropdown {
+    display: block;
+}
+
+/* Sửa dropdown */
+#header-row .navbar .nav li {
+    position: relative;
+}
+
+#header-row .navbar .nav li .dropdown-menu {
+    display: none;
+    position: absolute;
+    background: #333;
+    top: 100%;
+    left: 0;
+    min-width: 180px;
+    padding: 0;
+    list-style: none;
+    z-index: 9999;
+}
+
+#header-row .navbar .nav li:hover .dropdown-menu {
+    display: block;
+}
+
+/* Style cho dropdown item */
+#header-row .navbar .nav .dropdown-menu li a {
+    display: block;
+    padding: 10px 15px;
+    color: white;
+    text-decoration: none;
+    background: #444;
+}
+
+#header-row .navbar .nav .dropdown-menu li a:hover {
+    background: #555;
+}
+
+
+.row {
+    display: flex; 
+    
+}
+
+.span3 {
+    width: 30%; 
+}
+
+.logo img {
+    margin: 0px 20px 0px 120px;
+    width: 170px; 
+    height: 100px;
+}
+
+.span9 {
+    width: 70%; 
+}
 
 /* 
 Carousel
