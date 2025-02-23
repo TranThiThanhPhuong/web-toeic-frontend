@@ -2,11 +2,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Philosopher:wght@700&family=Poppins:wght@300;400;500&display=swap');
 
 :root {
-    --color-primary: #4f9af5;
     --color-white: #e9e9e9;
     --color-text: #9a4bd7;
-    --color-black: #512da8;
-    --color-black-1: #212b38;
+    --color-bgmain: #512da8;
+    --color-primary: #ffc441;
 }
 
 * {
@@ -34,13 +33,13 @@ body {
 }
 
 .menu-bar {
-    background-color: var(--color-black);
-    height: 80px;
+    background-color: var(--color-bgmain);
+    height: 70px;
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 5%;
+    padding: 0 80px;
     position: relative;
 }
 
@@ -68,8 +67,39 @@ body {
 }
 
 .menu-bar ul li a:hover {
-    color: var(--color-black-1);
+    color: var(--color-text);
 }
+
+/* dropdown menu style */
+.dropdown-menu {
+    display: none;
+    border-radius: 5px;
+}
+
+.menu-bar ul li:hover .dropdown-menu {
+    display: block;
+    position: absolute;
+    top: 100%;
+    background-color: var(--color-bgmain);
+}
+
+.menu-bar ul li:hover .dropdown-menu ul {
+    display: block;
+    padding: 7px;
+}
+
+.menu-bar ul li:hover .dropdown-menu ul li {
+    width: 130px;
+    padding: 7px;
+}
+
+.fas {
+    float: right;
+    margin-left: 10px;
+    padding-top: 3px;
+}
+
+/* USER*/
 
 .menu-bar .user {
     display: flex;
@@ -77,17 +107,17 @@ body {
 }
 
 .menu-bar .user a {
-    text-decoration: underline 1.5px var(--color-text);
+    text-decoration: underline 1.5px var(--color-white);
     text-underline-offset: 3px;
     padding: 3px 8px;
-    color: var(--color-text);
+    color: var(--color-white);
     font-size: 16px;
     font-weight: 400;
     transition: all 0.3s;
 }
 
 .menu-bar .user a:hover {
-    color: var(--color-white);
+    color: var(--color-text);
     text-decoration: underline 1.5px var(--color-white);
     text-underline-offset: 3px;
 }
@@ -99,75 +129,65 @@ body {
     background-color: var(--color-white);
 }
 
-.menu-bar .user-info { 
+/* USER-INFO */
+.menu-bar .user-info {
+    display: inline-block;
+}
+
+.menu-bar .user-info ul {
     display: flex;
-    justify-items: center;
     align-items: center;
-    right: 0;
-    padding: 10px;
+}
+
+.menu-bar .user-info ul li {
+    padding: 8px;
+    position: relative;
 }
 
 .menu-bar .user-info img {
     width: 45px;
     height: 45px;
     border-radius: 50%;
-    margin-right: 20px;
 }
 
 .menu-bar .user-info a {
     font-size: 16px;
-    color: var(--color-text);
+    color: var(--color-white);
     text-decoration: none;
     transition: all 0.3s;
 }
 
 .menu-bar .user-info a:hover {
-    color: var(--color-white);
+    color: var(--color-text);
 }
 
-.fas {
-    float: right;
-    margin-left: 10px;
-    padding-top: 3px;
-}
 
-/* dropdown menu style */
-.dropdown-menu {
+/* DROPDOWN-USER */
+.dropdown-user {
     display: none;
+    border-radius: 5px;
 }
 
-.menu-bar ul li:hover .dropdown-menu {
+.menu-bar .user-info ul li:hover .dropdown-user {
     display: block;
     position: absolute;
-    left: 0;
-    top: 100%;
-    background-color: var(--color-black);
+    background-color: var(--color-bgmain);
 }
 
-.menu-bar ul li:hover .dropdown-menu ul {
+.menu-bar .user-info ul li:hover .dropdown-user ul {
     display: block;
-    margin: 10px;
+    padding: 7px;
 }
 
-.menu-bar ul li:hover .dropdown-menu ul li {
-    width: 150px;
-    padding: 10px;
+.menu-bar .user-info ul li:hover .dropdown-user ul li {
+    width: 190px;
+    padding: 7px;
 }
 
-.dropdown-menu-1 {
-    display: none;
-}
-
-.dropdown-menu ul li:hover .dropdown-menu-1 {
-    display: block;
-    position: absolute;
-    left: 150px;
-    top: 0;
-    background-color: var(--color-black);
-}
+/* Home Page */
 
 .max-width {
-    height: calc(100vh - 80px);
+    height: calc(100vh - 70px);
     background-color: #f0ede6;
     background-position: center;
     margin-top: 0;
