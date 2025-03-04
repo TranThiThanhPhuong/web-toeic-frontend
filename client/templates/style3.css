@@ -13,6 +13,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    
 }
 
 body {
@@ -25,12 +27,15 @@ ul, li {
     list-style: none;
 }
 
+/* ====== VOCALBULARY ====== */
+
 .main-vocal {
     display: flex;
     justify-content: space-between;
     padding: 0px 60px 0 60px;
     height: calc(100vh - 70px);
     border-radius: 3px;
+    overflow: hidden;
 }
 
 .main-vocal section {
@@ -73,7 +78,7 @@ ul, li {
 .sidebar-list ul li {
     height: 60px;
     margin-right: 10px;
-    padding: 10px 0px;
+    padding: 10px 10px;
     border-bottom: 1px solid #f0ede6;
     list-style: none;
     position: relative;
@@ -106,6 +111,8 @@ ul, li {
 .main-content  {
     flex: 0 0 73%;
     background-color: #fff; 
+    overflow-y: scroll;
+    margin-right: -50px;
 }
 
 .main-vocal-search {
@@ -219,3 +226,348 @@ ul, li {
     height: 40px;
     margin-top: 10px;
 }
+
+/* ====== GRAMMAR ====== */
+
+.main-gramm-search {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-gramm-search .div-search {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 10px;
+}
+
+.main-gramm-search .form-search {
+    display: flex;
+    width: 50%;
+    border-radius: 5px;
+    position: relative;
+    border: solid 1px #dcd5d5;
+}
+
+.main-gramm-search .form-search input {
+    width: 100%;
+    border: none;
+    padding: 15px;
+    font-size: 15px;
+    font-weight: 400;
+    color: #000;
+    
+}
+
+.main-gramm-search .form-search button {
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--color-bgmain);
+    color: var(--color-white);
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.main-gramm-search .form-search button:focus {
+    outline: none;
+}
+
+.main-gramm-search .form-search button i {
+    font-size: 16px;
+}
+
+.main-gramm-search .form-search button:hover {
+    background-color: var(--color-primary);
+}
+
+.gramm {
+    padding: 10px;
+}
+
+.list-gramm {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.gramm .gramm-detail { 
+    display: flex;
+    padding: 10px;
+    border-bottom: 1px solid #f0ede6;
+}
+
+/* ====== LISTENING ====== */
+
+.main-container {
+    height: calc(100vh - 70px);
+    width: 100%;
+}
+
+.main-content-listening {
+    padding: 20px 60px;
+    display: inline-block;
+    justify-content: center;
+}
+
+.main-content-listening .header-title {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.main-content-listening .header-title h1 {
+    font-size: 40px;
+    font-weight: 600;
+    color: var(--color-primary);
+    font-family: monospace;
+}
+
+.main-content-listening .cards  {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.main-content-listening .cards .card {
+    display: block;
+    flex: 0 0 25%;
+    height: 380px;
+    border-radius: 15px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    transition: all 0.2s;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.main-content-listening .cards .card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); 
+    transform: translateY(-10px);
+    transition: all 0.3s ease; 
+}
+
+.main-content-listening .cards .card .part-img {
+    width: 100%;
+    height: 37%;
+    border-radius: 15px;
+}
+
+.main-content-listening .cards .card img {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+}
+
+.main-content-listening .cards .card .part-title {
+    padding: 10px 15px;
+}
+
+.main-content-listening .cards .card .part-title h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--color-primary);
+}
+
+.main-content-listening .cards .card .part-title h5 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #000;
+    padding: 5px 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.main-content-listening .cards .card .part-title p {
+    font-size: 13px;
+    color: #505050;
+    font-weight: 400;
+    text-align: justify;
+}
+
+/* ====== VOCABULARY-PART ====== */
+
+.main-list-question {
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+}
+
+.question-detail {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    border-bottom: solid 1px #e0d8d8;
+    border-radius: 10px;
+    border: solid 1px #d4cccc;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+
+.question-detail .ques-audio {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.question-detail .ques-audio h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--color-primary);
+}
+
+.question-detail .ques-audio audio {
+    width: 100%;
+    height: 50px;
+    margin-top: 10px;
+    color: #0b0a0a;
+}
+
+.question-detail .ques-photo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.question-detail .ques-photo img {
+    width: 300px;
+    height: 300px;
+    border: solid 1px #747373;
+}
+
+.question-detail .main-answer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.question-detail .main-answer .choose-ans {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.question-detail .main-answer .choose-ans div {
+    display: flex;
+    justify-content: first baseline;
+    padding: 10px;
+}
+
+.question-detail .main-answer .choose-ans div input {
+    margin-right: 7px;
+    width: 22px;
+    height: 22px;
+    border: double 1px #eddfdf;
+    fill: none;
+}
+
+.question-detail .main-answer .choose-ans div label {
+    color: #505050;
+    font-size: 16px;
+}
+
+.question-detail .main-answer .check-ans {
+    display: flex;
+    padding: 10px;
+    border: solid 1px #eddfdf;
+    width: 100%;
+    height: 250px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.question-detail .main-answer .check-ans .ans-detail div {
+    display: flex;
+    align-items: center;
+    padding: 5px 0;
+}
+
+.question-detail .main-answer .check-ans .ans-detail div h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-right: 10px;
+}
+
+.question-detail .main-answer .check-ans .ans-detail div span {
+    font-size: 16px;
+    font-weight: 500;
+    color: #000;
+}
+
+.question-detail .main-answer .check-ans .ans-detail div:last-child {
+    display: block;
+}
+
+.question-detail .main-answer .check-ans .ans-detail div:last-child span {
+    color: #512da8;
+    margin-bottom: 10px;
+}
+
+.question-detail .main-answer .check-ans .ans-detail div:last-child p {
+    font-size: 16px;
+    font-weight: 400;
+    color: #000;
+    padding: 5px 0;
+}
+
+/* ====== VOCABULARY-PART4 ====== */
+
+.main-list-questions .ques-photo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.main-list-questions .ques-photo img {
+    width: 300px;
+    height: 300px;
+    border: solid 1px #747373;
+}
+
+.question-detail .list-ques-part4 {
+    border-bottom: solid 1px #e0e0e0;
+    padding-bottom: 10px;
+}
+
+.question-detail .list-ques-part4 .question span {
+    padding: 5px 0;
+    color: #000;
+    font-size: 16px;
+} 
+
+.div-audio audio {
+    width: 100%;
+    height: 50px;
+    margin: 10px 0;
+    color: #0b0a0a;
+}
+
+.question-detail .main-answer .check-ans.part4 {
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+
+.question-detail .main-answer .check-ans.part4 .ans-detail {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.question-detail .main-answer .check-ans.part4 .ans-detail h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-right: 10px;
+}
+
+.question-detail .main-answer .check-ans.part4 .ans-detail span {
+    font-size: 16px;
+    font-weight: 500;
+    color: #000;
+}
+
+/* ====== READING ====== */

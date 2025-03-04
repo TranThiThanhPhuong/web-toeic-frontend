@@ -60,7 +60,6 @@ ul, li {
     list-style: none;
     position: relative;
     border-radius: 5px;
-    flex-direction: row;
 }
 
 .sidebar-user ul li:hover {
@@ -231,6 +230,7 @@ ul, li {
 
 .user-avatar .avatar-edit img {
     width: 180px;
+    height: 180px;
     object-fit: cover;
     border-radius: 50%;
     margin-bottom: 5px;
@@ -260,4 +260,3 @@ ul, li {
 .user-avatar .avatar-edit .edit:hover {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
 }
-

@@ -87,12 +87,15 @@ body {
     display: block;
     padding: 7px;
     z-index: 1;
-
 }
 
 .menu-bar ul li:hover .dropdown-menu ul li {
     width: 130px;
     padding: 7px;
+}
+
+.menu-bar ul li:hover .dropdown-menu ul li a {
+    font-size: 18px;
 }
 
 .fas {
@@ -164,7 +167,9 @@ body {
     color: var(--color-text);
 }
 
+
 /* DROPDOWN-USER */
+
 .dropdown-user {
     display: none;
     border-radius: 5px;
@@ -172,7 +177,7 @@ body {
 
 .menu-bar .user-menu ul li:hover .dropdown-user {
     display: block;
-    z-index: 7;
+    z-index: 1;
     position: absolute;
     background-color: var(--color-bgmain);
 }
@@ -183,11 +188,19 @@ body {
 }
 
 .menu-bar .user-menu ul li:hover .dropdown-user ul li {
-    width: 170px;
+    width: 180px;
     padding: 7px;
 }
 
-/* Home Page */
+.menu-bar .user-menu ul li:hover .dropdown-user ul li a {
+    font-size: 15px;
+}
+
+.menu-bar .user-menu ul li:hover .dropdown-user ul li a i {
+    margin-right: 5px;
+}
+
+/* ====== HOME PAFE ====== */
 
 .max-width {
     height: calc(100vh - 70px);

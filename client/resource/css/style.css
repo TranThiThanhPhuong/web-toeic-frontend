@@ -1,213 +1,66 @@
-.main-vocal {
+.main-gramm-search {
     display: flex;
-    justify-content: space-between;
-    padding: 20px 60px 0 60px;
-    height: calc(100vh - 70px);
-    border-radius: 3px;
+    flex-direction: column;
 }
 
-.main-vocal section {
-    padding: 20px;
-    height: 100%;
+.main-gramm-search .div-search {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 10px;
 }
 
-.sidebar-user  {
-    flex: 0 0 23%;
-    background-color: #fff; 
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    border-right: 1px solid #f0ede6;
+.main-gramm-search .form-search {
+    display: flex;
+    width: 50%;
+    border-radius: 5px;
+    position: relative;
+    border: solid 1px #dcd5d5;
 }
 
-.sidebar-user ul {
-    display: block;
-    list-style: none;
+.main-gramm-search .form-search input {
+    width: 100%;
+    border: none;
+    padding: 15px;
+    font-size: 15px;
+    font-weight: 400;
+    color: #000;
+    
 }
 
-.sidebar-user ul li:first-child {
-    padding: 20px 10px;
+.main-gramm-search .form-search button {
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--color-bgmain);
+    color: var(--color-white);
+    cursor: pointer;
+    transition: all 0.3s;
 }
 
-.sidebar-user ul li {
-    padding: 25px 10px;
+.main-gramm-search .form-search button:focus {
+    outline: none;
+}
+
+.main-gramm-search .form-search button i {
+    font-size: 16px;
+}
+
+.main-gramm-search .form-search button:hover {
+    background-color: var(--color-primary);
+}
+
+.gramm {
+    padding: 10px;
+}
+
+.list-gramm {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.gramm .gramm-detail { 
+    display: flex;
+    padding: 10px;
     border-bottom: 1px solid #f0ede6;
-    list-style: none;
-    position: relative;
-    border-radius: 5px;
 }
-
-.sidebar-user ul li:hover {
-    background-color: var(--color-bgmain);
-}
-
-.sidebar-user ul li a {
-    color: #000;
-    font-size: 15px;
-    font-weight: 500;
-    text-decoration: none;
-    transition: all 0.1s;
-}
-
-.sidebar-user ul li:hover a {
-    color: var(--color-white);
-}
-
-.sidebar-user ul li a i {
-    margin-right: 12px;
-}
-
-.user-info  {
-    flex: 0 0 53%;
-    background-color: #fff; 
-}
-
-.user-info .user-info-container {
-    display: flex;
-    flex-direction: column;
-}
-
-.user-info .user-info-container div {
-    padding: 14px 0;
-    display: flex;
-    flex-direction: column;
-}
-
-.user-info .user-info-container div h3 {
-    font-size: 20px;
-    font-weight: 500;
-    color: #000;
-    margin-bottom: 10px;
-    border-bottom: 1px solid #c3bdaf;
-}
-
-.user-info .user-info-container div label {
-    font-size: 15px;
-    font-weight: 400;
-    color: #000;
-    margin-bottom: 10px;
-}
-
-.user-info .user-info-container div input {
-    font-size: 15px;
-    padding: 10px;
-    border: 1px solid #c3bdaf;
-    border-radius: 5px;
-    margin-bottom: 10px;
-}
-
-.user-info .user-info-container div button {
-    font-size: 17px;
-    width: 25%;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    background-color: var(--color-bgmain);
-    color: var(--color-white);
-    cursor: pointer;
-    transition: all 0.3s;
-}
-
-.user-info .user-info-container div button:hover {
-    background-color: var(--color-primary);
-}
-
-
-.user-password  {
-    flex: 0 0 53%;
-    background-color: #fff; 
-}
-
-.user-password .user-password-container {
-    display: flex;
-    flex-direction: column;
-}
-
-.user-password .user-password-container div {
-    padding: 14px 0;
-    display: flex;
-    flex-direction: column;
-}
-
-.user-password .user-password-container div h3 {
-    font-size: 20px;
-    font-weight: 500;
-    color: #000;
-    margin-bottom: 10px;
-    border-bottom: 1px solid #c3bdaf;
-}
-
-.user-password .user-password-container div label {
-    font-size: 15px;
-    font-weight: 400;
-    color: #000;
-    margin-bottom: 10px;
-}
-
-.user-password .user-password-container div input {
-    font-size: 15px;
-    padding: 10px;
-    border: 1px solid #c3bdaf;
-    border-radius: 5px;
-    margin-bottom: 10px;
-}
-
-.user-password .user-password-container div button {
-    font-size: 17px;
-    width: 25%;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    background-color: var(--color-bgmain);
-    color: var(--color-white);
-    cursor: pointer;
-    transition: all 0.3s;
-}
-
-.user-password .user-password-container div button:hover {
-    background-color: var(--color-primary);
-}
-
-.user-avatar {
-    flex: 0 0 24%;
-    background-color: #fff; 
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
-}
-
-.user-avatar div {
-    display: block;
-    justify-content: center;
-    align-items: center;
-}
-
-.user-avatar div h3 {
-    padding: 0 0 3px 0;
-    margin: 20px 0;
-    font-size: 15px;
-    font-weight: 400;
-    color: #000;
-    border-bottom: 1px solid #c3bdaf;
-}
-
-.user-avatar div div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.user-avatar .avatar-edit {
-    position: relative;
-    width: 180px;
-    height: 180px;
-    margin: 0 auto;
-    border-radius: 50%;
-}
-
-.user-avatar .avatar-edit img {
-    width: 180px;
-    object-fit: cover;
-    border-radius: 50%;
-    margin-bottom: 5px;
-    cursor: pointer;
-}
-
-
-
